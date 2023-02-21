@@ -9,15 +9,15 @@ class Solution:
             return head
         else:
             prev, curr = head, head
+            if prev == curr:
+                curr = curr.next
+                prev.next = None
             while curr != None:
-                if prev == curr:
-                    curr = curr.next
-                    prev.next = None
-                else:
-                    nnext = curr.next
-                    curr.next = prev
-                    prev = curr
-                    curr = nnext
+
+                nnext = curr.next
+                curr.next = prev
+                prev = curr
+                curr = nnext
 
         return prev
             
