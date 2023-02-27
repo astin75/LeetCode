@@ -3,7 +3,7 @@ class MyQueue:
 
 
     def __init__(self):
-        self.stack = deque([])
+        self.stack = []
         
 
     def push(self, x: int) -> None:
@@ -17,7 +17,9 @@ class MyQueue:
         
     def pop(self) -> int:
         if self.stack:
-            return self.stack.popleft()
+            output = self.stack[0]
+            del self.stack[0]
+            return output
         return self.stack        
         
 
