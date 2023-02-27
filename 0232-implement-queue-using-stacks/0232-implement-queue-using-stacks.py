@@ -6,7 +6,7 @@ class MyQueue:
         
 
     def push(self, x: int) -> None:
-        self.stack.append(x)
+        self.stack+=[x]
         
 
     def peek(self) -> int:
