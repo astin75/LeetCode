@@ -9,9 +9,6 @@ class Solution:
             if s.isalpha():
                 return True
         else:
-            if len(s) == 1:
-                return True
-
             r_s = s[::-1]
             for i in range(len(s)):
                 a = s[i]
