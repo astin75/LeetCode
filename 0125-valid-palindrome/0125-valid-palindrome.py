@@ -3,7 +3,6 @@ class Solution:
     def isPalindrome(self, s: str) -> bool:
         s = s.replace(" ","")
         s = re.sub(r"[^\uAC00-\uD7A30-9a-zA-Z\s]", "", s)
-        print(s)
         if not len(s):
             return True
         elif len(s) == 1:
