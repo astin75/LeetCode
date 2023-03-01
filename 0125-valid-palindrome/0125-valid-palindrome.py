@@ -15,11 +15,11 @@ class Solution:
                 new_list+=a.lower()
             if len(new_list) == 1:
                 return True
-
-            r_s = new_list[::-1]
+            idx = 1
             for i in range(len(new_list)):
                 a = new_list[i]
-                b = r_s[i]
+                b = new_list[-idx]
+                idx+=1
 
                 if a.lower() != b.lower():
                     return False
