@@ -24,5 +24,14 @@ def bubble_sort(arr):
                 arr[jdx+1] = tmp
     return arr
 
-result = bubble_sort(value_list)
+def insertion_sort(arr):
+    for end in range(1, len(arr)):
+        for i in range(end, 0, -1):
+            if arr[i] < arr[i-1]:
+                tmp = arr[i]
+                arr[i] = arr[i-1]
+                arr[i-1] = tmp
+    return arr
+
+result = insertion_sort(value_list)
 print(result)
